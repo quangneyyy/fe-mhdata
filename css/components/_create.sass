@@ -1,0 +1,207 @@
+.create {
+    &__row {
+        display: flex;
+        @include t {
+            display: block; } }
+    &__col {
+        &:first-child {
+            flex: 0 0 calc(100% - 340px);
+            width: calc(100% - 340px);
+            padding-right: 8px;
+            @include d {
+                flex: 0 0 calc(100% - 296px);
+                width: calc(100% - 296px); }
+            @include t {
+                width: 100%;
+                padding: 0; } }
+        &:nth-child(2) {
+            flex-shrink: 0;
+            width: 340px;
+            @include d {
+                width: 296px; }
+            @include t {
+                width: auto; } } }
+    &__card {
+        &:not(:last-child) {
+            margin-bottom: 8px; } }
+    .card__button {
+        .icon {
+            width: 24px;
+            height: 24px; } }
+    &__card > .field,
+    .editor,
+    .file {
+        &:not(:last-child) {
+            margin-bottom: 32px;
+            @include d {
+                margin-bottom: 24px; } } }
+    &__group {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        margin: 0 -6px -12px;
+        @include m {
+            display: block;
+            margin: 0; }
+        .field {
+            flex: 0 0 calc(50% - 12px);
+            width: calc(50% - 12px);
+            margin: 0 6px 12px;
+            @include m {
+                width: 100%;
+                margin: 12px 0 0; } } }
+    &__line {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid $n3;
+        @include dark {
+            border-color: $n6; } }
+    &__info {
+        margin-right: auto;
+        @include base2;
+        color: $n5;
+        @include dark {
+            color: $n3; } }
+    .tooltip {
+        position: relative;
+        top: -1;
+        .icon {
+            fill: $shades1; } }
+    .switch {
+        margin-left: 12px; }
+    &__fieldset {
+        display: flex;
+        margin: 0 -6px;
+        .field {
+            flex: 0 0 calc(50% - 12px);
+            width: calc(50% - 12px);
+            margin: 0 6px; }
+        .field__label {
+            margin-bottom: 12px;
+            font-size: 12px;
+            line-height: (16/12);
+            font-weight: 700;
+            color: $n4; } }
+    &__label {
+        @include base2;
+        color: $n5;
+        @include dark {
+            color: $n3; } }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -4px -16px 32px 0;
+        @include d {
+            margin-bottom: 24px; }
+        .checkbox {
+            flex: 0 0 calc(33.33% - 16px);
+            width: calc(33.33% - 16px);
+            margin: 16px 16px 0 0;
+            @include m {
+                flex: 0 0 calc(50% - 16px);
+                width: calc(50% - 16px); } } }
+    &__top {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+        .create__label {
+            margin-right: auto; } }
+    &__counter {
+        @include caption1-m;
+        color: $shades1;
+        span {
+            color: $n7;
+            @include dark {
+                color: $n1; } } }
+    &__preview {
+        position: sticky;
+        top: 102px;
+        @include x {
+            top: 86px; }
+        @include t {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 50;
+            display: flex;
+            padding: 64px 16px;
+            overflow: auto;
+            background: $n2;
+            visibility: hidden;
+            opacity: 0;
+            transition: all .2s;
+            @include dark {
+                background: $n8; }
+            &.visible {
+                visibility: visible;
+                opacity: 1; } }
+        .card {
+            @include d {
+                padding: 16px; }
+            @include t {
+                max-width: 340px;
+                margin: auto; } }
+        .card__head {
+            margin-bottom: 24px; } }
+    &__close {
+        position: absolute;
+        top: 32px;
+        left: 32px;
+        display: none;
+        @include t {
+            display: inline-block; }
+        .icon {
+            width: 24px;
+            height: 24px;
+            fill: $n4; } }
+    &__photo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 16px;
+        img {
+            width: 100%;
+            border-radius: 12px; } }
+    &__flex {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 8px; }
+    &__subtitle {
+        @include title1-s; }
+    &__price {
+        flex-shrink: 0;
+        margin-left: 12px;
+        padding: 0 8px;
+        background: $s4;
+        border-radius: 6px;
+        line-height: 32px;
+        font-weight: 700;
+        @include dark {
+            color: $n7; } }
+    &__user {
+        display: flex;
+        align-items: center; }
+    &__avatar {
+        position: relative;
+        flex-shrink: 0;
+        width: 32px;
+        height: 32px;
+        margin-right: 12px;
+        & > img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover; } }
+    &__text {
+        font-weight: 500;
+        color: $n4;
+        span {
+            font-weight: 600;
+            color: $n7;
+            @include dark {
+                color: $n1; } } } }
+

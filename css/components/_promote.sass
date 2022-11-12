@@ -1,0 +1,30 @@
+.promote {
+    .card__head {
+        .button {
+            @include m {
+                display: none; } } }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -32px -16px 0;
+        @include m {
+            display: block;
+            margin: 0; } }
+    .summary {
+        flex: 0 0 calc(50% - 32px);
+        width: calc(50% - 32px);
+        margin: 32px 16px 0;
+        @include m {
+            width: 100%;
+            margin: 0;
+            &:not(:last-child) {
+                margin-bottom: 24px; } } }
+    .media {
+        margin: 32px 0 16px;
+        padding-top: 32px;
+        border-top: 1px solid $n3;
+        @include m {
+            margin-top: 24px;
+            padding-top: 24px; }
+        @include dark {
+            border-color: $n6; } } }
